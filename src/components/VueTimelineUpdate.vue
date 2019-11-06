@@ -198,10 +198,14 @@ $c: ".c-vue-timeline-update";
 
       #{$c}__title {
         flex: 1;
-        margin-bottom: 4px;
+        margin: 0 0 4px;
         text-transform: uppercase;
         font-weight: bold;
       }
+    }
+
+    #{$c}__description {
+      margin: 0;
     }
 
     #{$c}__thumbnail {
