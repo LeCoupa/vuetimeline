@@ -5,55 +5,55 @@
 <template lang="pug">
 article(
   :class=`[
-    "c-vue-timeline-step",
+    "c-vue-timeline-update",
     {
-      "c-vue-timeline-step--is-last": isLast
+      "c-vue-timeline-update--is-last": isLast
     }
   ]`
 )
-  .c-vue-timeline-step__left
-    span.c-vue-timeline-step__ago {{ ago }}
+  .c-vue-timeline-update__left
+    span.c-vue-timeline-update__ago {{ ago }}
 
-  .c-vue-timeline-step__center
+  .c-vue-timeline-update__center
     base-number(
       :color="color"
       :icon="icon"
-      class="c-vue-timeline-step__bullet"
+      class="c-vue-timeline-update__bullet"
       icon-size="16px"
       size="small"
     )
 
-    span.c-vue-timeline-step__line
+    span.c-vue-timeline-update__line
 
-  .c-vue-timeline-step__right
-    .c-vue-timeline-step__header
+  .c-vue-timeline-update__right
+    .c-vue-timeline-update__header
       base-badge(
         v-if="category"
         :color="color"
         :filled="true"
-        class="c-vue-timeline-step__category"
+        class="c-vue-timeline-update__category"
         size="small"
       ) {{ category }}
 
       h2(
         v-html="title"
-        class="c-vue-timeline-step__title"
+        class="c-vue-timeline-update__title"
       )
 
     img(
       v-if="thumbnail"
       :src="thumbnail"
-      class="c-vue-timeline-step__thumbnail"
+      class="c-vue-timeline-update__thumbnail"
     )
 
     p(
       v-html="description"
-      class="c-vue-timeline-step__description"
+      class="c-vue-timeline-update__description"
     )
 
     div(
       v-if="$slots.default"
-      class="c-vue-timeline-step__slot"
+      class="c-vue-timeline-update__slot"
     )
 </template>
 
@@ -138,7 +138,7 @@ export default {
 @import "src/assets/stylesheets/tools/_tools.mq.scss";
 
 // VARIABLES
-$c: ".c-vue-timeline-step";
+$c: ".c-vue-timeline-update";
 
 #{$c} {
   display: flex;

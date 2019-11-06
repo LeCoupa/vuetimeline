@@ -2,7 +2,7 @@
 
 ### Added
 
-- VueTimelineStep: new component.
+- VueTimelineUpdate: new component.
 
 ## Questions
 

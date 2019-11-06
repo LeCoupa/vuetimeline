@@ -3,7 +3,7 @@
  ***************************************************************************/
 
 // BASE COMPONENTS
-import VueTimelineStep from "./components/VueTimelineStep.vue";
+import VueTimelineUpdate from "./components/VueTimelineUpdate.vue";
 
 /**************************************************************************
  * ENVIRONMENT CONFIGURATIONS
@@ -17,7 +17,7 @@ function install(Vue, options) {
     install.installed = true;
   }
 
-  Vue.component("VueTimelineStep", VueTimelineStep);
+  Vue.component("vue-timeline-update", VueTimelineUpdate);
 }
 
 // Create module definition for Vue.use()
@@ -44,4 +44,4 @@ export default plugin;
 
 // To allow individual component use, export components
 // each can be registered via Vue.component()
-export { VueTimelineStep };
+export { VueTimelineUpdate };
