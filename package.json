@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@growthbunker/vuetimeline",
-  "version": "0.4.18",
+  "version": "0.0.1",
   "author": "Growth Bunker <product@growthbunker.com>",
   "license": "MIT",
   "description": "An easy-to-use component to build beautiful timelines.",
@@ -33,7 +33,10 @@
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
-  "dependencies": {},
+  "dependencies": {
+    "timeago.js": "4.0.1",
+    "vuedarkmode": "0.4.19"
+  },
   "devDependencies": {
     "autoprefixer": "9.6.1",
     "cross-env": "^6.0.3",
