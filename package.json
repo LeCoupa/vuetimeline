@@ -34,8 +34,8 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "timeago.js": "4.0.1",
-    "vuedarkmode": "0.4.19"
+    "@growthbunker/vuedarkmode": "0.4.19",
+    "timeago.js": "4.0.1"
   },
   "devDependencies": {
     "autoprefixer": "9.6.1",

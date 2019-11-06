@@ -40,14 +40,14 @@ const baseConfig = {
 // Refer to https://rollupjs.org/guide/en/#warning-treating-module-as-external-dependency
 const external = [
   // list external dependencies, exactly the way it is written in the import statement.
-  "vuedarkmode",
+  "@growthbunker/vuedarkmode",
   "timeago.js"
 ];
 
 // UMD/IIFE shared settings: output.globals
 // Refer to https://rollupjs.org/guide/en#output-globals for details
 const globals = {
-  vuedarkmode: "VueDarkMode",
+  "@growthbunker/vuedarkmode": "VueDarkMode",
   "timeago.js": "timeago_js"
 };
 
