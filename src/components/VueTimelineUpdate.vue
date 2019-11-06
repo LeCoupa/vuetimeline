@@ -63,8 +63,7 @@ article(
 
 <script>
 // NPM
-import BaseBadge from "@growthbunker/vuedarkmode";
-import BaseNumber from "@growthbunker/vuedarkmode";
+import { BaseBadge, BaseNumber } from "@growthbunker/vuedarkmode";
 import { format } from "timeago.js";
 
 export default {
