@@ -1,0 +1,97 @@
+/* **************************************************************************
+   SETTINGS > COLORS
+   To get the color name: http://veli.ee/colorpedia/?c=354052
+   ************************************************************************** */
+
+// BLACK
+
+$black: #000000;
+$ebony-clay: #222c3c;
+$ebony-clay-2: #273142;
+$mirage: #1b2431;
+$oxford-blue: #313d4f;
+$woodsmoke: #171819;
+
+// BLUE
+
+$azure-radiance: #0093ee;
+$dodger-blue: #2da1f8;
+
+// GREEN
+
+$apple: #4ece3d;
+$sushi: #96bf47;
+
+// GREY
+
+$nepal: #8eacc5;
+$regent-st-blue: #a9c7df;
+
+// ORANGE
+
+$sunglow: #ffc02a;
+$sun: #ffb610;
+
+// PURPLE
+
+$portage: #ab7ef6;
+
+// RED
+
+$cinnabar: #e54124;
+$crimson: #e0102b;
+
+// TURQUOISE
+
+$java: #26c2c9;
+
+// WHITE
+
+$athens-gray: #e6eaee;
+$barley-white: #fff5cd;
+$white: #ffffff;
+
+// SOCIAL
+
+$facebook: #3b5998;
+$google: #db4437;
+$messenger: #0084ff;
+$shopify: #96bf47;
+$twitter: #1da1f2;
+
+// DATASETS
+
+$levelColors: (
+  "description": $nepal,
+  "error": $crimson,
+  "info": $azure-radiance,
+  "success": $sushi,
+  "warning": $sun
+);
+
+$mainColors: (
+  "black": $oxford-blue,
+  "blue": $azure-radiance,
+  "green": $sushi,
+  "grey": $regent-st-blue,
+  "orange": $sun,
+  "purple": $portage,
+  "red": $crimson,
+  "turquoise": $java,
+  "white": $white
+);
+
+$socialColors: (
+  "facebook": $facebook,
+  "google": $google,
+  "messenger": $messenger,
+  "shopify": $shopify,
+  "twitter": $twitter
+);
+
+$statusColors: (
+  "error": $crimson,
+  "normal": $azure-radiance,
+  "success": $sushi,
+  "warning": $sunglow
+);

@@ -1,0 +1,24 @@
+# System
+.DS_Store
+
+# Editor
+.vscode
+
+# Dependencies
+node_modules
+
+# Logs
+npm-debug.log
+
+# Dotenv file
+.env
+
+# Nuxt build
+.nuxt
+
+# Package build
+/dist
+
+# Static build
+/website
+
