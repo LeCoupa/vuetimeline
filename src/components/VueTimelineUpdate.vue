@@ -103,7 +103,7 @@ export default {
     },
     icon: {
       type: String,
-      default: null
+      required: true
     },
     isLast: {
       type: Boolean,
