@@ -250,6 +250,7 @@ $c: ".c-vue-timeline-update";
       #{$c}__ago {
         color: $regent-st-blue;
         font-size: 14px;
+        line-height: 32px; // Size of the badge to align horizontally
         user-select: none;
       }
     }
