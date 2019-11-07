@@ -1,6 +1,6 @@
 <p align="center" style="background: #1b2431; padding: 20px 0;">
   <a href="https://www.growthbunker.dev/vuetimeline" target="_blank">
-    <img width="100%" src="https://raw.githubusercontent.com/growthbunker/vuetimeline/master/src/images/banner.svg?sanitize=true">
+    <img width="100%" src="https://raw.githubusercontent.com/growthbunker/vuetimeline/master/src/images/vuetimeline.jpg?sanitize=true">
   </a>
 </p>
 
