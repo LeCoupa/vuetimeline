@@ -235,6 +235,7 @@ $c: ".c-vue-timeline-update";
     #{$c}__thumbnail {
       margin: 6px 0 12px;
       max-width: 100%;
+      user-select: none;
     }
 
     #{$c}__description {
