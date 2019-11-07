@@ -76,7 +76,7 @@ export default {
   props: {
     animation: {
       type: Boolean,
-      default: false
+      default: true
     },
     animationContainer: {
       type: String,
