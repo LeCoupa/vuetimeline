@@ -4,7 +4,7 @@
   "version": "0.0.3",
   "author": "Growth Bunker <product@growthbunker.com>",
   "license": "MIT",
-  "description": "One easy-to-use component to build beautiful timelines.",
+  "description": "One easy-to-use responsive component to build beautiful timelines.",
   "keywords": [
     "vue",
     "components",
@@ -34,7 +34,7 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "@growthbunker/vuedarkmode": "0.4.19",
+    "@growthbunker/vuedarkmode": "0.4.20",
     "timeago.js": "4.0.1"
   },
   "devDependencies": {
