@@ -41,6 +41,7 @@ const baseConfig = {
 const external = [
   // list external dependencies, exactly the way it is written in the import statement.
   "@growthbunker/vuedarkmode",
+  "scrollreveal",
   "timeago.js"
 ];
 
@@ -48,6 +49,7 @@ const external = [
 // Refer to https://rollupjs.org/guide/en#output-globals for details
 const globals = {
   "@growthbunker/vuedarkmode": "VueDarkMode",
+  scrollreveal: "ScrollReveal",
   "timeago.js": "timeago_js"
 };
 

@@ -6,6 +6,7 @@
 article(
   :class=`[
     "c-vue-timeline-update",
+    "js-vue-timeline-update",
     {
       "c-vue-timeline-update--is-last": isLast
     }
@@ -73,6 +74,18 @@ export default {
   },
 
   props: {
+    animation: {
+      type: Boolean,
+      default: false
+    },
+    animationContainer: {
+      type: String,
+      default: null
+    },
+    animationDuration: {
+      type: Number,
+      default: 1500
+    },
     category: {
       type: String,
       default: null
@@ -122,6 +135,17 @@ export default {
   computed: {
     ago() {
       return format(this.date);
+    }
+  },
+
+  mounted() {
+    if (this.animation) {
+      const ScrollReveal = require("scrollreveal").default;
+
+      ScrollReveal().reveal(".js-vue-timeline-update", {
+        container: this.animationContainer,
+        duration: this.animationDuration
+      });
     }
   }
 };

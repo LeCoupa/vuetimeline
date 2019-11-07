@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@growthbunker/vuedarkmode": "0.4.20",
+    "scrollreveal": "4.0.5",
     "timeago.js": "4.0.1"
   },
   "devDependencies": {
