@@ -66,6 +66,48 @@ Get the latest version from [jsdelivr](https://www.jsdelivr.com/), and import th
 
 We recommend our users to lock Vue Timeline's version when using CDN. Requesting the latest version (as opposed to "latest major" or "latest minor") is dangerous because major versions usually come with breaking changes. Only do this if you really know what you are doing. [Please refer to jsdelivr.com](https://www.jsdelivr.com/features) for more information.
 
+## Example
+
+Once the plugin is installed, you can use the component like this:
+
+```html
+<template>
+  <!-- Latest update -->
+  <vue-timeline-update
+    :date="new Date('2017-02-26')"
+    title="v2.2.0 - Initial D"
+    description="Today I am thrilled to announce the release of Vue.js 2.2.0."
+    thumbnail="/images/vuetimeline/initial_d.jpg"
+    category="announcement"
+    icon="code"
+    color="red"
+  />
+
+  <!-- Another update -->
+  <vue-timeline-update
+    :date="new Date('2016-11-22')"
+    title="v2.1.0 - Hunter X Hunter"
+    description="Today I am thrilled to announce the release of Vue.js 2.1.0."
+    thumbnail="/images/vuetimeline/hunter_x_hunter.jpg"
+    category="announcement"
+    icon="code"
+    color="turquoise"
+  />
+
+  <!-- Yet another update -->
+  <vue-timeline-update
+    :date="new Date('2016-09-30')"
+    title="v2.0.0 - Ghost in the Shell"
+    description="Today I am thrilled to announce the release of Vue.js 2.0.0"
+    thumbnail="/images/vuetimeline/ghost_in_the_shell.jpg"
+    category="announcement"
+    icon="code"
+    color="white"
+    is-last
+  />
+</template>
+```
+
 ## Contributing
 
 You are more than welcome to contribute to Vue Timeline. Just submit changes via pull request and I will review them before merging.
