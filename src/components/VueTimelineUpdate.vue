@@ -142,7 +142,7 @@ export default {
     if (this.animation) {
       const ScrollReveal = require("scrollreveal").default;
 
-      ScrollReveal().reveal(".js-vue-timeline-update", {
+      ScrollReveal().reveal(this.$el, {
         container: this.animationContainer,
         duration: this.animationDuration
       });
