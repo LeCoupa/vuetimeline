@@ -4,7 +4,7 @@
   "version": "0.0.7",
   "author": "Growth Bunker <product@growthbunker.com>",
   "license": "MIT",
-  "description": "One easy-to-use responsive component to build beautiful timelines.",
+  "description": "One easy-to-use component to build beautiful responsive timelines.",
   "keywords": [
     "vue",
     "components",
