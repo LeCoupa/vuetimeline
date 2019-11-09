@@ -26,7 +26,15 @@ article(
 
     span.c-vue-timeline-update__line
 
-  .c-vue-timeline-update__right
+  div(
+    @click="onContentClick"
+    :class=`[
+      "c-vue-timeline-update__content",
+      {
+        "c-vue-timeline-update__content--clickable": $listeners.click
+      }
+    ]`
+  )
     .c-vue-timeline-update__header
       base-badge(
         v-if="category"
@@ -38,13 +46,25 @@ article(
 
       h2(
         v-html="title"
-        class="c-vue-timeline-update__title"
+        @click="onTitleClick"
+        :class=`[
+          "c-vue-timeline-update__title",
+          {
+            "c-vue-timeline-update__title--clickable": $listeners["click:title"]
+          }
+        ]`
       )
 
     img(
       v-if="thumbnail"
+      @click="onThumbnailClick"
+      :class=`[
+        "c-vue-timeline-update__thumbnail",
+        {
+          "c-vue-timeline-update__thumbnail--clickable": $listeners["click:thumbnail"]
+        }
+      ]`
       :src="thumbnail"
-      class="c-vue-timeline-update__thumbnail"
     )
 
     p(
@@ -147,6 +167,28 @@ export default {
         duration: this.animationDuration
       });
     }
+  },
+
+  methods: {
+    // --> EVENT LISTENERS <--
+
+    onContentClick(event) {
+      event.stopPropagation();
+
+      this.$emit("click", event);
+    },
+
+    onThumbnailClick(event) {
+      event.stopPropagation();
+
+      this.$emit("click:thumbnail", event);
+    },
+
+    onTitleClick(event) {
+      event.stopPropagation();
+
+      this.$emit("click:title", event);
+    }
   }
 };
 </script>
@@ -199,7 +241,7 @@ $c: ".c-vue-timeline-update";
     }
   }
 
-  #{$c}__right {
+  #{$c}__content {
     flex: 1;
     padding-bottom: 40px;
 
@@ -225,6 +267,10 @@ $c: ".c-vue-timeline-update";
         margin: 0 0 4px;
         text-transform: uppercase;
         font-weight: bold;
+
+        &--clickable {
+          cursor: pointer;
+        }
       }
     }
 
@@ -236,6 +282,10 @@ $c: ".c-vue-timeline-update";
       margin: 6px 0 12px;
       max-width: 100%;
       user-select: none;
+
+      &--clickable {
+        cursor: pointer;
+      }
     }
 
     #{$c}__description {
@@ -244,6 +294,10 @@ $c: ".c-vue-timeline-update";
 
     #{$c}__slot {
       margin-top: 20px;
+    }
+
+    &--clickable {
+      cursor: pointer;
     }
   }
 
@@ -256,7 +310,7 @@ $c: ".c-vue-timeline-update";
       }
     }
 
-    #{$c}__right {
+    #{$c}__content {
       padding-bottom: 20px;
     }
   }
@@ -285,7 +339,7 @@ $c: ".c-vue-timeline-update";
       margin-left: 40px;
     }
 
-    #{$c}__right {
+    #{$c}__content {
       #{$c}__title,
       #{$c}__description {
         font-size: 18px;
