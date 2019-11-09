@@ -173,20 +173,14 @@ export default {
     // --> EVENT LISTENERS <--
 
     onContentClick(event) {
-      event.stopPropagation();
-
       this.$emit("click", event);
     },
 
     onThumbnailClick(event) {
-      event.stopPropagation();
-
       this.$emit("click:thumbnail", event);
     },
 
     onTitleClick(event) {
-      event.stopPropagation();
-
       this.$emit("click:title", event);
     }
   }
