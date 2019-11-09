@@ -29,20 +29,23 @@ article(
   div(
     @click="onContentClick"
     :class=`[
-      "c-vue-timeline-update__content",
+      "c-vue-timeline-update__right",
       {
-        "c-vue-timeline-update__content--clickable": $listeners.click
+        "c-vue-timeline-update__right--clickable": $listeners.click
       }
     ]`
   )
-    .c-vue-timeline-update__header
-      base-badge(
-        v-if="category"
-        :color="color"
-        :filled="true"
-        class="c-vue-timeline-update__category"
-        size="small"
-      ) {{ category }}
+    .c-vue-timeline-update__information
+      .c-vue-timeline-update__meta
+        base-badge(
+          v-if="category"
+          :color="color"
+          :filled="true"
+          class="c-vue-timeline-update__category"
+          size="small"
+        ) {{ category }}
+
+        span.c-vue-timeline-update__ago {{ ago }}
 
       h2(
         v-html="title"
@@ -209,6 +212,15 @@ $c: ".c-vue-timeline-update";
     text-decoration: underline;
   }
 
+  #{$c}__left,
+  #{$c}__right  {
+    #{$c}__ago {
+      color: $regent-st-blue;
+      font-size: 14px;
+      user-select: none;
+    }
+  }
+
   #{$c}__left {
     display: none;
   }
@@ -235,7 +247,7 @@ $c: ".c-vue-timeline-update";
     }
   }
 
-  #{$c}__content {
+  #{$c}__right {
     flex: 1;
     padding-bottom: 40px;
 
@@ -245,15 +257,25 @@ $c: ".c-vue-timeline-update";
       line-height: 26px;
     }
 
-    #{$c}__header {
+    #{$c}__information {
       display: flex;
       flex-direction: column;
       margin-top: 4px;
 
-      #{$c}__category {
-        align-self: flex-start;
-        flex: 0 0 auto;
+      #{$c}__meta {
+        display: flex;
+        align-items: center;
         margin-bottom: 10px;
+
+        #{$c}__category {
+          align-self: flex-start;
+          flex: 0 0 auto;
+          margin-right: 10px;
+        }
+
+        #{$c}__ago {
+          line-height: 24px; // Size of the category to align horizontally
+        }
       }
 
       #{$c}__title {
@@ -304,7 +326,7 @@ $c: ".c-vue-timeline-update";
       }
     }
 
-    #{$c}__content {
+    #{$c}__right {
       padding-bottom: 20px;
     }
   }
@@ -321,10 +343,8 @@ $c: ".c-vue-timeline-update";
       text-align: right;
 
       #{$c}__ago {
-        color: $regent-st-blue;
-        font-size: 14px;
+        display: inline-block;
         line-height: 32px; // Size of the badge to align horizontally
-        user-select: none;
       }
     }
 
@@ -333,18 +353,20 @@ $c: ".c-vue-timeline-update";
       margin-left: 40px;
     }
 
-    #{$c}__content {
+    #{$c}__right {
       #{$c}__title,
       #{$c}__description {
         font-size: 18px;
         line-height: 28px;
       }
 
-      #{$c}__header {
+      #{$c}__information {
         flex-direction: row;
 
-        #{$c}__category {
-          margin-right: 10px;
+        #{$c}__meta {
+          #{$c}__ago {
+            display: none;
+          }
         }
 
         #{$c}__title {
