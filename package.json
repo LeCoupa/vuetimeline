@@ -16,8 +16,8 @@
     "url": "https://github.com/growthbunker/vuetimeline.git"
   },
   "bugs": {
-    "url": "https://github.com/growthbunker/vuetimeline/issues",
-    "email": "product@growthbunker.com"
+    "email": "product@growthbunker.com",
+    "url": "https://github.com/growthbunker/vuetimeline/issues"
   },
   "main": "dist/vuetimeline.ssr.js",
   "module": "dist/vuetimeline.esm.js",
@@ -34,6 +34,7 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
+    "@growthbunker/stylesheets": "0.0.6",
     "@growthbunker/vuedarkmode": "^0.4.24",
     "scrollreveal": "^4.0.5",
     "timeago.js": "^4.0.1"
