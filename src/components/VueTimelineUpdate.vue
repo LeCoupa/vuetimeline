@@ -295,8 +295,14 @@ $c: ".c-vue-timeline-update";
     }
 
     #{$c}__thumbnail {
+      box-sizing: border-box;
       margin: 6px 0 12px;
       max-width: 100%;
+      border: 1px solid $regent-st-blue;
+      border-radius: 6px;
+      box-shadow: 0 1px 5px 0 rgba($woodsmoke, 0.6);
+      transition: all 250ms linear;
+      animation: float 3.5s ease-in-out infinite;
       user-select: none;
 
       &--clickable {
@@ -378,6 +384,25 @@ $c: ".c-vue-timeline-update";
         margin: 8px 0 16px;
       }
     }
+  }
+}
+
+// --> ANIMATIONS <--
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0 rgba($black, 0.6);
+    transform: translatey(0px);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0 rgba($black, 0.2);
+    transform: translatey(-5px);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0 rgba($black, 0.6);
+    transform: translatey(0px);
   }
 }
 </style>
