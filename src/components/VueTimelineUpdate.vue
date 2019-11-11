@@ -196,8 +196,8 @@ export default {
 
 <style lang="scss">
 // IMPORTS
-@import "src/assets/stylesheets/settings/_settings.colors.scss";
-@import "src/assets/stylesheets/tools/_tools.mq.scss";
+@import "node_modules/@growthbunker/stylesheets/settings/_colors.scss";
+@import "node_modules/@growthbunker/stylesheets/tools/_mq.scss";
 
 // VARIABLES
 $c: ".c-vue-timeline-update";
