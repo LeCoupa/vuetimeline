@@ -87,8 +87,8 @@ article(
 
 <script>
 // NPM
-import { BaseBadge, BaseNumber } from "@growthbunker/vuedarkmode";
-import { format } from "timeago.js";
+import { BaseBadge, BaseNumber } from "@growthbunker/vuedarkmode"
+import { format } from "timeago.js"
 
 export default {
   components: {
@@ -126,7 +126,7 @@ export default {
           "red",
           "turquoise",
           "white"
-        ].includes(x);
+        ].includes(x)
       }
     },
     date: {
@@ -157,18 +157,18 @@ export default {
 
   computed: {
     ago() {
-      return format(this.date);
+      return format(this.date)
     }
   },
 
   mounted() {
     if (this.animation) {
-      const ScrollReveal = require("scrollreveal").default;
+      const ScrollReveal = require("scrollreveal").default
 
       ScrollReveal().reveal(this.$el, {
         container: this.animationContainer,
         duration: this.animationDuration
-      });
+      })
     }
   },
 
@@ -176,18 +176,18 @@ export default {
     // --> EVENT LISTENERS <--
 
     onContentClick(event) {
-      this.$emit("click", event);
+      this.$emit("click", event)
     },
 
     onThumbnailClick(event) {
-      this.$emit("click:thumbnail", event);
+      this.$emit("click:thumbnail", event)
     },
 
     onTitleClick(event) {
-      this.$emit("click:title", event);
+      this.$emit("click:title", event)
     }
   }
-};
+}
 </script>
 
 <!-- *************************************************************************
