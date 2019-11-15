@@ -34,8 +34,8 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "@growthbunker/stylesheets": "0.0.6",
-    "@growthbunker/vuedarkmode": "^0.4.24",
+    "@growthbunker/stylesheets": "0.1.10",
+    "@growthbunker/vuedarkmode": "0.4.27",
     "scrollreveal": "^4.0.5",
     "timeago.js": "^4.0.1"
   },
