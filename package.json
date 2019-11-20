@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@growthbunker/stylesheets": "0.1.17",
-    "@growthbunker/vuedarkmode": "0.5.0",
+    "@growthbunker/vuedarkmode": "0.5.1",
     "scrollreveal": "4.0.5",
     "timeago.js": "4.0.1"
   },
