@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@growthbunker/vuetimeline",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Growth Bunker <product@growthbunker.com>",
   "license": "MIT",
   "description": "One easy-to-use component to build beautiful responsive timelines.",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@growthbunker/stylesheets": "0.1.17",
-    "@growthbunker/vuedarkmode": "0.5.1",
+    "@growthbunker/vuedarkmode": "0.5.2",
     "scrollreveal": "4.0.5",
     "timeago.js": "4.0.1"
   },
