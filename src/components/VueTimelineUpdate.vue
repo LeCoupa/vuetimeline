@@ -6,6 +6,7 @@
 article(
   :class=`[
     "c-vue-timeline-update",
+    "c-vue-timeline-update--" + theme,
     "js-vue-timeline-update",
     {
       "c-vue-timeline-update--is-last": isLast
@@ -19,6 +20,7 @@ article(
     base-number(
       :color="color"
       :icon="icon"
+      :theme="theme"
       class="c-vue-timeline-update__bullet"
       icon-size="16px"
       size="small"
@@ -41,6 +43,7 @@ article(
           v-if="category"
           :color="color"
           :filled="true"
+          :theme="theme"
           class="c-vue-timeline-update__category"
           size="small"
         ) {{ category }}
@@ -117,16 +120,9 @@ export default {
       type: String,
       default: "blue",
       validator(x) {
-        return [
-          "black",
-          "blue",
-          "green",
-          "orange",
-          "purple",
-          "red",
-          "turquoise",
-          "white"
-        ].includes(x)
+        return ["black", "blue", "green", "orange", "purple", "red", "turquoise", "white"].includes(
+          x
+        )
       }
     },
     date: {
@@ -144,6 +140,13 @@ export default {
     isLast: {
       type: Boolean,
       default: false
+    },
+    theme: {
+      type: String,
+      default: "dark",
+      validator(x) {
+        return ["dark", "light"].includes(x)
+      }
     },
     thumbnail: {
       type: String,
@@ -197,6 +200,8 @@ export default {
 <style lang="scss">
 // IMPORTS
 @import "node_modules/@growthbunker/stylesheets/settings/_colors.scss";
+@import "node_modules/@growthbunker/stylesheets/settings/_themes.scss";
+@import "node_modules/@growthbunker/stylesheets/tools/_functions.scss";
 @import "node_modules/@growthbunker/stylesheets/tools/_mq.scss";
 
 // VARIABLES
@@ -205,17 +210,14 @@ $c: ".c-vue-timeline-update";
 #{$c} {
   display: flex;
   overflow: hidden;
-  color: $white;
 
   a {
-    color: $white;
     text-decoration: underline;
   }
 
   #{$c}__left,
   #{$c}__right  {
     #{$c}__ago {
-      color: $regent-st-blue;
       font-size: 14px;
       user-select: none;
     }
@@ -243,7 +245,6 @@ $c: ".c-vue-timeline-update";
       margin-top: 32px;
       width: 1px;
       height: 100%;
-      background-color: $oxford-blue;
     }
   }
 
@@ -298,19 +299,15 @@ $c: ".c-vue-timeline-update";
       box-sizing: border-box;
       margin: 6px 0 12px;
       max-width: 100%;
-      border: 1px solid $regent-st-blue;
+      border-width: 1px;
+      border-style: solid;
       border-radius: 6px;
-      box-shadow: 0 1px 5px 0 rgba($woodsmoke, 0.6);
       transition: all 250ms linear;
       user-select: none;
 
       &--clickable {
         cursor: pointer;
       }
-    }
-
-    #{$c}__description {
-      color: $regent-st-blue;
     }
 
     #{$c}__slot {
@@ -325,14 +322,56 @@ $c: ".c-vue-timeline-update";
   // --> BOOLEANS <--
 
   &--is-last {
-    #{$c}__center {
-      #{$c}__line {
-        background: linear-gradient($oxford-blue 50%, rgba($oxford-blue, 0));
-      }
-    }
-
     #{$c}__right {
       padding-bottom: 20px;
+    }
+  }
+
+  // --> THEMES <--
+
+  @each $theme in $themes {
+    &--#{map-get($theme, "name")} {
+      color: mdg($theme, "fonts", "default", "primary");
+
+      a {
+        color: mdg($theme, "fonts", "default", "primary");
+      }
+
+      #{$c}__left,
+      #{$c}__right  {
+        #{$c}__ago {
+          color: mdg($theme, "fonts", "default", "secondary");
+        }
+      }
+
+      #{$c}__center {
+        #{$c}__line {
+          background-color: mdg($theme, "borders", "default", "primary");
+        }
+      }
+
+      #{$c}__right {
+        #{$c}__thumbnail {
+          border-color: mdg($theme, "borders", "reverse", "primary");
+          box-shadow: 0 1px 5px 0 mdg($theme, "box-shadows", "default", "primary");
+        }
+
+        #{$c}__description {
+          color: mdg($theme, "fonts", "default", "secondary");
+        }
+      }
+
+      // --> BOOLEANS <--
+      &#{$c}--is-last {
+        #{$c}__center {
+          #{$c}__line {
+            background: linear-gradient(
+              mdg($theme, "borders", "default", "primary") 50%,
+              rgba(mdg($theme, "borders", "default", "primary"), 0)
+            );
+          }
+        }
+      }
     }
   }
 }
