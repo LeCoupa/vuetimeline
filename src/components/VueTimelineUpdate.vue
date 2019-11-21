@@ -5,58 +5,58 @@
 <template lang="pug">
 article(
   :class=`[
-    "c-vue-timeline-update",
-    "c-vue-timeline-update--" + theme,
+    "gb-vue-timeline-update",
+    "gb-vue-timeline-update--" + theme,
     "js-vue-timeline-update",
     {
-      "c-vue-timeline-update--is-last": isLast
+      "gb-vue-timeline-update--is-last": isLast
     }
   ]`
 )
-  .c-vue-timeline-update__left
-    span.c-vue-timeline-update__ago {{ ago }}
+  .gb-vue-timeline-update__left
+    span.gb-vue-timeline-update__ago {{ ago }}
 
-  .c-vue-timeline-update__center
+  .gb-vue-timeline-update__center
     base-number(
       :color="color"
       :icon="icon"
       :theme="theme"
-      class="c-vue-timeline-update__bullet"
+      class="gb-vue-timeline-update__bullet"
       icon-size="16px"
       size="small"
     )
 
-    span.c-vue-timeline-update__line
+    span.gb-vue-timeline-update__line
 
   div(
     @click="onContentClick"
     :class=`[
-      "c-vue-timeline-update__right",
+      "gb-vue-timeline-update__right",
       {
-        "c-vue-timeline-update__right--clickable": $listeners.click
+        "gb-vue-timeline-update__right--clickable": $listeners.click
       }
     ]`
   )
-    .c-vue-timeline-update__information
-      .c-vue-timeline-update__meta
+    .gb-vue-timeline-update__information
+      .gb-vue-timeline-update__meta
         base-badge(
           v-if="category"
           :color="color"
           :filled="true"
           :theme="theme"
-          class="c-vue-timeline-update__category"
+          class="gb-vue-timeline-update__category"
           size="small"
         ) {{ category }}
 
-        span.c-vue-timeline-update__ago {{ ago }}
+        span.gb-vue-timeline-update__ago {{ ago }}
 
       h2(
         v-html="title"
         @click="onTitleClick"
         :class=`[
-          "c-vue-timeline-update__title",
+          "gb-vue-timeline-update__title",
           {
-            "c-vue-timeline-update__title--clickable": $listeners["click:title"]
+            "gb-vue-timeline-update__title--clickable": $listeners["click:title"]
           }
         ]`
       )
@@ -65,9 +65,9 @@ article(
       v-if="thumbnail"
       @click="onThumbnailClick"
       :class=`[
-        "c-vue-timeline-update__thumbnail",
+        "gb-vue-timeline-update__thumbnail",
         {
-          "c-vue-timeline-update__thumbnail--clickable": $listeners["click:thumbnail"]
+          "gb-vue-timeline-update__thumbnail--clickable": $listeners["click:thumbnail"]
         }
       ]`
       :src="thumbnail"
@@ -75,12 +75,12 @@ article(
 
     p(
       v-html="description"
-      class="c-vue-timeline-update__description"
+      class="gb-vue-timeline-update__description"
     )
 
     div(
       v-if="$slots.default"
-      class="c-vue-timeline-update__slot"
+      class="gb-vue-timeline-update__slot"
     )
 </template>
 
@@ -205,7 +205,7 @@ export default {
 @import "node_modules/@growthbunker/stylesheets/tools/_mq.scss";
 
 // VARIABLES
-$c: ".c-vue-timeline-update";
+$c: ".gb-vue-timeline-update";
 
 #{$c} {
   display: flex;
@@ -379,8 +379,8 @@ $c: ".c-vue-timeline-update";
         #{$c}__center {
           #{$c}__line {
             background: linear-gradient(
-            mdg($theme, "borders", "default", "primary") 50%,
-            rgba(mdg($theme, "borders", "default", "primary"), 0)
+              mdg($theme, "borders", "default", "primary") 50%,
+              rgba(mdg($theme, "borders", "default", "primary"), 0)
             );
           }
         }
@@ -437,5 +437,4 @@ $c: ".c-vue-timeline-update";
     }
   }
 }
-
 </style>
