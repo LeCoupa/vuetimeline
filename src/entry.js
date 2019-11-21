@@ -17,7 +17,16 @@ function install(Vue, options) {
     install.installed = true
   }
 
+  // Declare the component
   Vue.component("vue-timeline-update", VueTimelineUpdate)
+
+  // Configure the theme to use (dark will always be the default theme)
+  if (!Vue.prototype.$gb) {
+    Vue.prototype.$gb = {}
+  }
+
+  Vue.prototype.$gb.vuetimeline = {}
+  Vue.prototype.$gb.vuetimeline.theme = (options || {}).theme || "dark"
 }
 
 // Create module definition for Vue.use()

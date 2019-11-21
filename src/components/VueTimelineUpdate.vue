@@ -6,7 +6,7 @@
 article(
   :class=`[
     "gb-vue-timeline-update",
-    "gb-vue-timeline-update--" + theme,
+    "gb-vue-timeline-update--" + computedTheme,
     "js-vue-timeline-update",
     {
       "gb-vue-timeline-update--is-last": isLast
@@ -93,11 +93,16 @@ article(
 import { BaseBadge, BaseNumber } from "@growthbunker/vuedarkmode"
 import { format } from "timeago.js"
 
+// PROJECT: MIXINS
+import ThemeMixin from "../mixins/ThemeMixin.js"
+
 export default {
   components: {
     BaseBadge,
     BaseNumber
   },
+
+  mixins: [ThemeMixin],
 
   props: {
     animation: {
@@ -140,13 +145,6 @@ export default {
     isLast: {
       type: Boolean,
       default: false
-    },
-    theme: {
-      type: String,
-      default: "dark",
-      validator(x) {
-        return ["dark", "light"].includes(x)
-      }
     },
     thumbnail: {
       type: String,
