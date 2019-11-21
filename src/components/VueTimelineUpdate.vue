@@ -210,6 +210,7 @@ $c: ".c-vue-timeline-update";
 #{$c} {
   display: flex;
   overflow: hidden;
+  font-family: "Heebo", "Helvetica Neue", Source Sans Pro, Helvetica, Arial, sans-serif;
 
   a {
     text-decoration: underline;
@@ -378,8 +379,8 @@ $c: ".c-vue-timeline-update";
         #{$c}__center {
           #{$c}__line {
             background: linear-gradient(
-              mdg($theme, "borders", "default", "primary") 50%,
-              rgba(mdg($theme, "borders", "default", "primary"), 0)
+            mdg($theme, "borders", "default", "primary") 50%,
+            rgba(mdg($theme, "borders", "default", "primary"), 0)
             );
           }
         }
@@ -436,4 +437,5 @@ $c: ".c-vue-timeline-update";
     }
   }
 }
+
 </style>
