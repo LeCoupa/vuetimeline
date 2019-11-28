@@ -20,7 +20,7 @@ article(
     base-number(
       :color="color"
       :icon="icon"
-      :theme="theme"
+      :theme="computedTheme"
       class="gb-vue-timeline-update__bullet"
       icon-size="16px"
       size="small"
@@ -43,7 +43,7 @@ article(
           v-if="category"
           :color="color"
           :filled="true"
-          :theme="theme"
+          :theme="computedTheme"
           class="gb-vue-timeline-update__category"
           size="small"
         ) {{ category }}
@@ -90,17 +90,17 @@ article(
 
 <script>
 // NPM
-import { BaseBadge, BaseNumber } from "@growthbunker/vuedarkmode"
+// import { BaseBadge, BaseNumber } from "@growthbunker/vuedarkmode"
 import { format } from "timeago.js"
 
 // PROJECT: MIXINS
 import ThemeMixin from "../mixins/ThemeMixin.js"
 
 export default {
-  components: {
-    BaseBadge,
-    BaseNumber
-  },
+  // components: {
+  //   BaseBadge,
+  //   BaseNumber
+  // },
 
   mixins: [ThemeMixin],
 
