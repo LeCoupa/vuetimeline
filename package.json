@@ -37,7 +37,7 @@
     "lint:scss": "stylelint '**/*.scss'; stylelint '**/*.vue' --syntax scss; exit 0;"
   },
   "dependencies": {
-    "@growthbunker/vuedarkmode": "0.5.7",
+    "@growthbunker/vuedarkmode": "0.5.9",
     "scrollreveal": "4.0.5",
     "timeago.js": "4.0.1"
   },
