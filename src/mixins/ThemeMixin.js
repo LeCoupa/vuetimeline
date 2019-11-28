@@ -20,7 +20,7 @@ export default {
         return this.theme
       }
 
-      return this.$gb.vuedarkmode.theme
+      return this.$gb.vuetimeline.theme
     }
   }
 }
