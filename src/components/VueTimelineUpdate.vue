@@ -208,6 +208,7 @@ $c: ".gb-vue-timeline-update";
 #{$c} {
   display: flex;
   overflow: hidden;
+  text-align: left;
   font-family: "Heebo", "Helvetica Neue", Source Sans Pro, Helvetica, Arial, sans-serif;
 
   a {
