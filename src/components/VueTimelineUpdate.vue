@@ -90,17 +90,17 @@ article(
 
 <script>
 // NPM
-// import { BaseBadge, BaseNumber } from "@growthbunker/vuedarkmode"
+import { BaseBadge, BaseNumber } from "@growthbunker/vuedarkmode"
 import { format } from "timeago.js"
 
 // PROJECT: MIXINS
 import ThemeMixin from "../mixins/ThemeMixin.js"
 
 export default {
-  // components: {
-  //   BaseBadge,
-  //   BaseNumber
-  // },
+  components: {
+    BaseBadge,
+    BaseNumber
+  },
 
   mixins: [ThemeMixin],
 
