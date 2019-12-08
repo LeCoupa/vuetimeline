@@ -332,7 +332,7 @@ $c: ".gb-vue-timeline-update";
   @each $theme in $themes {
     $themeName: map-get($theme, "name");
 
-    &--#{themeName} {
+    &--#{$themeName} {
       color: mdg($theme, "fonts", "default", "primary");
 
       a {
