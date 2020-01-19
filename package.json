@@ -37,12 +37,12 @@
     "lint:scss": "stylelint '**/*.scss'; stylelint '**/*.vue' --syntax scss; exit 0;"
   },
   "dependencies": {
-    "@growthbunker/vuedarkmode": "0.5.9",
+    "@growthbunker/vuedarkmode": "0.5.48",
     "scrollreveal": "4.0.5",
     "timeago.js": "4.0.1"
   },
   "devDependencies": {
-    "@growthbunker/stylesheets": "0.2.1",
+    "@growthbunker/stylesheets": "0.2.13",
     "autoprefixer": "9.6.1",
     "cross-env": "6.0.3",
     "minimist": "1.2.0",
