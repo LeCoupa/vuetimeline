@@ -83,6 +83,9 @@ article(
       v-if="$slots.default"
       class="gb-vue-timeline-update__slot"
     )
+      slot(
+        name="default"
+      )
 </template>
 
 <!-- *************************************************************************
