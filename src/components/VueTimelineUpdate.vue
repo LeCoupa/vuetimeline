@@ -74,6 +74,7 @@ article(
     )
 
     p(
+      v-if="description"
       v-html="description"
       class="gb-vue-timeline-update__description"
     )
@@ -136,7 +137,7 @@ export default {
     },
     description: {
       type: String,
-      required: true
+      default: null
     },
     icon: {
       type: String,
