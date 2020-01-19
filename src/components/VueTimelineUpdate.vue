@@ -349,7 +349,7 @@ $c: ".gb-vue-timeline-update";
 
       #{$c}__center {
         #{$c}__bullet {
-          box-shadow: 0 1px 5px 0 mdg($theme, "box-shadows", "default", "primary");
+          box-shadow: 0 1px 5px 0 mdg($theme, "shadows", "default", "primary");
         }
 
         #{$c}__line {
@@ -361,14 +361,14 @@ $c: ".gb-vue-timeline-update";
         #{$c}__information {
           #{$c}__meta {
             #{$c}__category {
-              box-shadow: 0 1px 5px 0 mdg($theme, "box-shadows", "default", "primary");
+              box-shadow: 0 1px 5px 0 mdg($theme, "shadows", "default", "primary");
             }
           }
         }
 
         #{$c}__thumbnail {
           border-color: mdg($theme, "borders", "reverse", "primary");
-          box-shadow: 0 1px 5px 0 mdg($theme, "box-shadows", "default", "primary");
+          box-shadow: 0 1px 5px 0 mdg($theme, "shadows", "default", "primary");
         }
 
         #{$c}__description {
