@@ -29,10 +29,10 @@ yarn add @growthbunker/vuetimeline
 In your `main.js` file:
 
 ```js
-import Vue from "vue";
-import vuetimeline from "@growthbunker/vuetimeline";
+import Vue from "vue"
+import vuetimeline from "@growthbunker/vuetimeline"
 
-Vue.use(vuetimeline);
+Vue.use(vuetimeline)
 ```
 
 ### Nuxt.js
@@ -40,10 +40,10 @@ Vue.use(vuetimeline);
 Create a new plugin in `plugins/vuetimeline.js`:
 
 ```js
-import Vue from "vue";
-import vuetimeline from "@growthbunker/vuetimeline";
+import Vue from "vue"
+import vuetimeline from "@growthbunker/vuetimeline"
 
-Vue.use(vuetimeline);
+Vue.use(vuetimeline)
 ```
 
 Add this new plugin to `nuxt.config.js`.
@@ -61,7 +61,7 @@ Get the latest version from [jsdelivr](https://www.jsdelivr.com/), and import th
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5/dist/vue.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuetimeline@latest/dist/vuetimeline.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@growthbunker/vuetimeline@latest/dist/vuetimeline.min.js"></script>
 ```
 
 We recommend our users to lock Vue Timeline's version when using CDN. Requesting the latest version (as opposed to "latest major" or "latest minor") is dangerous because major versions usually come with breaking changes. Only do this if you really know what you are doing. [Please refer to jsdelivr.com](https://www.jsdelivr.com/features) for more information.
