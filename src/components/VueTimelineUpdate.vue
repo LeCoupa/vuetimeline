@@ -73,6 +73,14 @@ article(
       :src="thumbnail"
     )
 
+    img(
+      v-if="gallery"
+      v-for="(image, index) in gallery"
+      :key="index"
+      :src="image"
+      :class=`["gb-vue-timeline-update__thumbnail"]`
+    )
+
     p(
       v-if="description"
       v-html="description"
@@ -152,6 +160,10 @@ export default {
     },
     thumbnail: {
       type: String,
+      default: null
+    },
+    gallery: {
+      type: Array,
       default: null
     },
     title: {
