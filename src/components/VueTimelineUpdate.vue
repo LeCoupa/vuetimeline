@@ -14,7 +14,7 @@ article(
   ]`
 )
   .gb-vue-timeline-update__left
-    span.gb-vue-timeline-update__ago {{ ago }}
+    span.gb-vue-timeline-update__ago {{ oppositeText }}
 
   .gb-vue-timeline-update__center
     base-number(
@@ -48,7 +48,7 @@ article(
           size="small"
         ) {{ category }}
 
-        span.gb-vue-timeline-update__ago {{ ago }}
+        span.gb-vue-timeline-update__ago {{ oppositeText }}
 
       h2(
         v-html="title"
@@ -134,9 +134,9 @@ export default {
         )
       }
     },
-    date: {
-      type: Date,
-      required: true
+    opposite: {
+      type: [String, Date],
+      default: ""
     },
     description: {
       type: String,
@@ -161,9 +161,15 @@ export default {
   },
 
   computed: {
-    ago() {
-      return format(this.date)
-    }
+    oppositeText() {
+      if (typeof this.opposite == "object") {
+        // Must be date
+        return format(this.opposite)
+      }
+
+      // Otherwise just return string
+      return this.opposite
+    },
   },
 
   mounted() {
