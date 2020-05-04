@@ -74,7 +74,7 @@ Once the plugin is installed, you can use the component like this:
 <template>
   <!-- Latest update -->
   <vue-timeline-update
-    :date="new Date('2017-02-26')"
+    :opposite="new Date('2017-02-26')"
     title="v2.2.0 - Initial D"
     description="Today I am thrilled to announce the release of Vue.js 2.2.0."
     thumbnail="/images/vuetimeline/initial_d.jpg"
@@ -85,7 +85,7 @@ Once the plugin is installed, you can use the component like this:
 
   <!-- Another update -->
   <vue-timeline-update
-    :date="new Date('2016-11-22')"
+    :opposite="new Date('2016-11-22')"
     title="v2.1.0 - Hunter X Hunter"
     description="Today I am thrilled to announce the release of Vue.js 2.1.0."
     thumbnail="/images/vuetimeline/hunter_x_hunter.jpg"
@@ -96,7 +96,7 @@ Once the plugin is installed, you can use the component like this:
 
   <!-- Yet another update -->
   <vue-timeline-update
-    :date="new Date('2016-09-30')"
+    opposite="Launch!"
     title="v2.0.0 - Ghost in the Shell"
     description="Today I am thrilled to announce the release of Vue.js 2.0.0"
     thumbnail="/images/vuetimeline/ghost_in_the_shell.jpg"
