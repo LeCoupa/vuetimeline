@@ -134,6 +134,10 @@ export default {
         )
       }
     },
+    dateString: {
+      type: String,
+      required: false
+    },
     date: {
       type: Date,
       required: true
@@ -162,7 +166,7 @@ export default {
 
   computed: {
     ago() {
-      return format(this.date)
+      return this.dateString ? this.dateString : format(this.date)
     }
   },
 
