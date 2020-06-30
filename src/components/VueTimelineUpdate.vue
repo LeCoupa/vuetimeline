@@ -134,13 +134,13 @@ export default {
         )
       }
     },
-    dateString: {
-      type: String,
-      required: false
-    },
     date: {
       type: Date,
       required: true
+    },
+    dateString: {
+      type: String,
+      default: null
     },
     description: {
       type: String,
