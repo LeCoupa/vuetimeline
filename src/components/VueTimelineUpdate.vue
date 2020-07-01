@@ -166,7 +166,7 @@ export default {
 
   computed: {
     ago() {
-      return this.dateString ? this.dateString : format(this.date)
+      return this.dateString || format(this.date)
     }
   },
 
