@@ -50,6 +50,7 @@ article(
 
         span.gb-vue-timeline-update__ago {{ ago }}
 
+    slot(name="title")
       h2(
         v-html="title"
         @click="onTitleClick"
@@ -73,11 +74,12 @@ article(
       :src="thumbnail"
     )
 
-    p(
-      v-if="description"
-      v-html="description"
-      class="gb-vue-timeline-update__description"
-    )
+    slot(name="description")
+      p(
+        v-if="description"
+        v-html="description"
+        class="gb-vue-timeline-update__description"
+      )
 
     div(
       v-if="$slots.default"
